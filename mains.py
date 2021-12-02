@@ -1,7 +1,7 @@
-def fahrenheit_from(celsius):
-    fahrenheit = float(celsius) * 9 / 5 + 32
-    fahrenheit = round(fahrenheit, 3)
-    return str(fahrenheit)
+from flask import Flask
 
-celsius = input("Enter celsius calue: ")
-print(fahrenheit_from(celsius))
+app = Flask(__name__)
+
+@app.route("/")
+def index():
+    return "Congratulations, it's a web app!"
